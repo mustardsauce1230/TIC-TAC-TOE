@@ -1,0 +1,137 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid #333;
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+#difficulty {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #333;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.cell.player-x {
+  color: #ff4500;
+}
+
+.cell.player-o {
+  color: #1e90ff;
+}
+
+.cell.win {
+  background-color: #90ee90;
+}
+
+footer {
+  margin-top: 20px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  transition: border-color 0.3s;
+}
+
+a:hover {
+  border-color: transparent;
+}
+
+/* Dark mode */
+.dark-mode {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+.dark-mode .btn,
+.dark-mode #difficulty {
+  background-color: #444;
+  color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+}
+
+.dark-mode .btn:hover,
+.dark-mode #difficulty:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.dark-mode .cell {
+  background-color: #444;
+  color: #f0f0f0;
+}
+
+.dark-mode .cell.win {
+  background-color: #32cd32;
+}
